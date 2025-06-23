@@ -93,18 +93,18 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Cairo', 'Amiri', sans-serif;
+    font-family: 'Hacen Maghreb', 'IBM Plex Sans Arabic', 'Cairo', 'Amiri', sans-serif;
     direction: rtl;
   }
 
   /* Arabic text improvements */
   .font-arabic {
-    font-family: 'Cairo', 'Amiri', sans-serif;
+    font-family: 'Hacen Maghreb', 'IBM Plex Sans Arabic', 'Cairo', 'Amiri', sans-serif;
     line-height: 1.8;
   }
 
   .font-hacen {
-    font-family: 'Hacen Maghreb', 'Cairo', 'Amiri', sans-serif;
+    font-family: 'Hacen Maghreb', 'IBM Plex Sans Arabic', 'Cairo', 'Amiri', sans-serif;
     font-weight: bold;
   }
 
@@ -129,6 +129,122 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: #4a1366;
+  }
+
+  /* Professional Animations */
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-slide-right {
+    animation: slideInFromRight 0.8s ease-out;
+  }
+
+  .animate-slide-left {
+    animation: slideInFromLeft 0.8s ease-out;
+  }
+
+  .animate-slide-bottom {
+    animation: slideInFromBottom 0.6s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s ease-out;
+  }
+
+  .animate-fade-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-pulse-custom {
+    animation: pulse 2s infinite;
+  }
+
+  /* Staggered animation delays */
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 0.5s;
   }
 }
 
